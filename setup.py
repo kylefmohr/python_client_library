@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 if __name__ == '__main__':
     setup(
         name='deathbycaptcha',
-        version='4.6.12',
+        version='4.6.3',
         license='MIT',
         author='DeathByCaptcha',
         author_email='deathbycaptcha@protonmail.com',
