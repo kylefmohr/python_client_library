@@ -53,7 +53,7 @@ try:
     if captcha:
         # The CAPTCHA was solved; captcha["captcha"] item holds its
         # numeric ID, and captcha["text"] item its text.
-        print "CAPTCHA %s solved: %s" % (captcha["captcha"], captcha["text"])
+        print ("CAPTCHA %s solved: %s" % (captcha["captcha"], captcha["text"]))
         if ...:  # check if the CAPTCHA was incorrectly solved
             client.report(captcha["captcha"])
 except deathbycaptcha.AccessDeniedException:
