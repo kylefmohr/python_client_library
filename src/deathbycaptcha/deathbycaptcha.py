@@ -70,7 +70,7 @@ Visit http://www.deathbycaptcha.com/user/api for updates.
 
 import base64
 import errno
-import imghdr
+import filetype
 import random
 import select
 import socket
@@ -129,7 +129,7 @@ def _load_image(captcha):
             captcha_file.close()
     if not len(img):
         raise ValueError('CAPTCHA image is empty')
-    elif imghdr.what(None, img) is None:
+    elif filetype.guess(img) is None:
         raise TypeError('Unknown CAPTCHA image type')
     else:
         return img
